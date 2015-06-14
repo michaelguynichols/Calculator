@@ -27,6 +27,19 @@ class CalculatorBrain {
         knownOps["√"] = Op.UnaryOperation("√", sqrt)
     }
     
+    private func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
+        if !ops.isEmpty {
+            var remainingOps = ops
+            let op = remainingOps.removeLast()
+            switch op {
+            case .Operand(let operand):
+                return (operand, remainingOps)
+            case 
+            }
+        }
+        return (nil, ops)
+    }
+    
     func evaluate() -> Double? {
         
     }
